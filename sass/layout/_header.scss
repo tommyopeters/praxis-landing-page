@@ -1,0 +1,58 @@
+header {
+  background: url("../assets/images/banner-1.png");
+  min-height: 93rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 120rem;
+    align-items: center;
+
+    .logo-bar {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+      }
+    }
+    .header-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 15rem;
+
+      &_text {
+        h1 {
+          font-family: "Open Sans", sans-serif;
+          font-size: 6rem;
+          font-weight: 700;
+        }
+        p {
+          margin-top: 3rem;
+          font-family: "Lato", sans-serif;
+          font-size: 2rem;
+          color: #515151;
+        }
+        button {
+          border: none;
+          font-family: "Open Sans", sans-serif;
+          text-transform: uppercase;
+          color: white;
+          font-size: 2rem;
+          font-weight: 500;
+          padding: 2rem 4rem;
+          background-color: #1576a8;
+          border-radius: 1.3rem;
+          margin-top: 5rem;
+        }
+      }
+    }
+  }
+}

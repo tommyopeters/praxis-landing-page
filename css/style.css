@@ -1,0 +1,157 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 40px; }
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.wb_banner {
+  min-height: 439px;
+  background: url(../images/banner_back.jpg) no-repeat left top;
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 9% 0 0%; */ }
+
+header {
+  background: url("../assets/images/banner-1.png");
+  min-height: 93rem;
+  padding: 3rem;
+  display: flex;
+  justify-content: center; }
+  header .container {
+    display: flex;
+    flex-direction: column;
+    width: 120rem;
+    align-items: center; }
+    header .container .logo-bar {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      header .container .logo-bar h3 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 2rem; }
+    header .container .header-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 15rem; }
+      header .container .header-content_text h1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 6rem;
+        font-weight: 700; }
+      header .container .header-content_text p {
+        margin-top: 3rem;
+        font-family: "Lato", sans-serif;
+        font-size: 2rem;
+        color: #515151; }
+      header .container .header-content_text button {
+        border: none;
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 2rem 4rem;
+        background-color: #1576a8;
+        border-radius: 1.3rem;
+        margin-top: 5rem; }
+
+main {
+  padding-top: 10rem; }
+  main .product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .product h1 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase; }
+    main .product p {
+      font-family: "Lato", sans-serif;
+      font-size: 2rem;
+      color: #505050;
+      padding: 2rem; }
+    main .product-features {
+      margin-top: 4rem;
+      padding: 0 10%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5rem;
+      align-items: start;
+      justify-content: center; }
+      main .product-features_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer; }
+        main .product-features_item .feature-icon {
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          height: 15rem;
+          width: 15rem;
+          border-radius: 15rem;
+          font-size: 6rem;
+          background-color: rgba(55, 94, 251, 0.39);
+          color: rgba(255, 255, 255, 0.808); }
+          main .product-features_item .feature-icon::before {
+            content: "";
+            z-index: -1;
+            height: 14rem;
+            width: 14rem;
+            border-radius: 15rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(55, 94, 251, 0.39); }
+        main .product-features_item h3 {
+          font-family: "Open Sans", sans-serif;
+          font-size: 2rem;
+          font-weight: 700; }
+        main .product-features_item p {
+          font-family: "Lato", sans-serif;
+          font-size: 1.6rem;
+          color: #505050; }
+        main .product-features_item:hover .feature-icon::before {
+          width: 12rem;
+          height: 12rem;
+          transition: all 500ms ease-in-out; }
