@@ -44,6 +44,8 @@ body {
 
 header {
   background: url("../assets/images/banner-1.png");
+  background-size: cover;
+  background-position: bottom;
   min-height: 93rem;
   padding: 3rem;
   display: flex;
@@ -51,7 +53,7 @@ header {
   header .container {
     display: flex;
     flex-direction: column;
-    width: 120rem;
+    width: 80%;
     align-items: center; }
     header .container .logo-bar {
       width: 90%;
@@ -88,25 +90,48 @@ header {
         border-radius: 1.3rem;
         margin-top: 5rem; }
 
+@media screen and (max-width: 1550px) {
+  header {
+    padding-bottom: 10rem; }
+    header .container {
+      width: 90%; }
+      header .container .header-content {
+        margin-top: 7rem; } }
+
+@media screen and (max-width: 1200px) {
+  header .container .header-content {
+    grid-template-columns: 1fr;
+    width: 70%; }
+    header .container .header-content div:nth-child(2) {
+      display: none; } }
+
+@media screen and (max-width: 900px) {
+  header .container .header-content {
+    width: 80%; }
+    header .container .header-content_text h1 {
+      font-size: 5rem; } }
+
 main {
+  z-index: -900;
   padding-top: 10rem; }
-  main .product {
+  main #product {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
-    main .product h1 {
+    justify-content: center;
+    min-height: 100vh; }
+    main #product h2 {
       font-family: "Open Sans", sans-serif;
       font-size: 4rem;
       font-weight: 700;
       text-transform: uppercase; }
-    main .product p {
+    main #product p {
       font-family: "Lato", sans-serif;
       font-size: 2rem;
       color: #505050;
       padding: 2rem; }
-    main .product-features {
+    main #product .product-features {
       margin-top: 4rem;
       padding: 0 10%;
       display: grid;
@@ -114,14 +139,14 @@ main {
       gap: 5rem;
       align-items: start;
       justify-content: center; }
-      main .product-features_item {
+      main #product .product-features_item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         cursor: pointer; }
-        main .product-features_item .feature-icon {
+        main #product .product-features_item .feature-icon {
           display: flex;
           position: relative;
           align-items: center;
@@ -132,7 +157,7 @@ main {
           font-size: 6rem;
           background-color: rgba(55, 94, 251, 0.39);
           color: rgba(255, 255, 255, 0.808); }
-          main .product-features_item .feature-icon::before {
+          main #product .product-features_item .feature-icon::before {
             content: "";
             z-index: -1;
             height: 14rem;
@@ -143,15 +168,310 @@ main {
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(55, 94, 251, 0.39); }
-        main .product-features_item h3 {
+        main #product .product-features_item h3 {
           font-family: "Open Sans", sans-serif;
           font-size: 2rem;
           font-weight: 700; }
-        main .product-features_item p {
+        main #product .product-features_item p {
           font-family: "Lato", sans-serif;
           font-size: 1.6rem;
           color: #505050; }
-        main .product-features_item:hover .feature-icon::before {
+        main #product .product-features_item:hover .feature-icon::before {
           width: 12rem;
           height: 12rem;
           transition: all 500ms ease-in-out; }
+  main #processes {
+    min-height: 60vh;
+    background: url(../assets/images/banner-3.png);
+    background-size: cover;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main #processes h2 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: #e7e7e7;
+      margin-bottom: 5rem; }
+    main #processes .process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 80%;
+      margin: 0 auto 5rem auto;
+      direction: rtl;
+      gap: 1rem;
+      padding: 5rem;
+      background-color: #ffffff55;
+      box-shadow: 0 0 2rem #00000060; }
+      main #processes .process-item {
+        background-color: #e7e7e7;
+        padding: 10rem;
+        min-height: 30vh;
+        box-shadow: 0 0 2rem #00000060;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        direction: ltr;
+        position: relative; }
+        main #processes .process-item i {
+          font-size: 7rem;
+          color: #5d40f4; }
+        main #processes .process-item h3 {
+          margin: 3rem 0;
+          font-family: "Open Sans", sans-serif;
+          font-size: 3rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #5d40f4;
+          text-align: center; }
+        main #processes .process-item p {
+          font-family: "Lato";
+          font-size: 1.8rem;
+          color: #000000c4;
+          text-align: center;
+          line-height: 3 rem; }
+      main #processes .process div:not(:first-child):after {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 10rem;
+        width: 10rem;
+        background-color: #e7e7e7;
+        border-right: 1rem solid #7e5fc1;
+        border-bottom: 1rem solid #7e5fc1;
+        outline: none;
+        right: -0.7rem;
+        top: 50%;
+        transform: translate(50%, -50%) rotate(-45deg); }
+  main #plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    width: 100%; }
+    main #plans h2 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center; }
+    main #plans p {
+      font-family: "Lato", sans-serif;
+      font-size: 2rem;
+      color: #505050;
+      margin-bottom: 5rem; }
+    main #plans .pricing {
+      width: 60rem;
+      background-color: rgba(255, 255, 255, 0.808);
+      border-radius: 2rem;
+      overflow: hidden; }
+      main #plans .pricing-upper {
+        background-color: lightgrey;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative; }
+        main #plans .pricing-upper h3 {
+          font-family: "Open Sans", sans-serif;
+          font-size: 3rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: purple;
+          text-align: center;
+          position: relative; }
+          main #plans .pricing-upper h3::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            height: 0.3rem;
+            background-color: purple; }
+        main #plans .pricing-upper .price {
+          position: relative;
+          font-size: 8rem;
+          font-family: "Open Sans", sans-serif; }
+          main #plans .pricing-upper .price:before {
+            content: "$";
+            position: absolute;
+            left: -3.5rem;
+            bottom: 0;
+            font-size: 6rem;
+            font-weight: 500; }
+          main #plans .pricing-upper .price:after {
+            content: "$99";
+            position: absolute;
+            font-size: 3rem;
+            font-weight: 600;
+            text-decoration: line-through;
+            bottom: 1rem; }
+        main #plans .pricing-upper:after {
+          content: "PER MONTH";
+          position: absolute;
+          bottom: 0;
+          transform: translateY(50%);
+          padding: 1.3rem 3rem;
+          border-radius: 3.5rem;
+          font-size: 2rem;
+          background-color: purple;
+          color: #f6f6f6; }
+      main #plans .pricing-main {
+        padding: 6rem;
+        display: flex;
+        justify-content: center; }
+        main #plans .pricing-main ul {
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%; }
+          main #plans .pricing-main ul li {
+            width: 85%;
+            text-align: center;
+            border-bottom: 0.1rem solid #00000020;
+            font-size: 2rem;
+            padding: 2rem; }
+  main #faq-section {
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: -2; }
+    main #faq-section h2 {
+      margin-top: 5rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center; }
+    main #faq-section .faq-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10rem;
+      row-gap: 5rem;
+      margin-top: 5rem;
+      width: 65%; }
+      main #faq-section .faq-group .faq {
+        font-size: 1.8rem; }
+        main #faq-section .faq-group .faq-question {
+          background-color: #1576a8;
+          color: white;
+          width: 100%;
+          padding: 1rem 2rem;
+          border-radius: 1rem;
+          position: relative;
+          margin-bottom: 1.5rem;
+          z-index: 0; }
+          main #faq-section .faq-group .faq-question::before {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            left: 10%;
+            transform: translateY(50%);
+            border-left: 1.8rem solid #1576a8;
+            border-top: 1.8rem solid transparent;
+            border-bottom: 1.8rem solid transparent; }
+        main #faq-section .faq-group .faq-answer {
+          padding: 1rem; }
+
+@media screen and (max-width: 1550px) {
+  main #product p {
+    padding: 2rem; }
+  main #processes .process {
+    width: 100%; }
+    main #processes .process-item {
+      padding: 5rem 10rem; }
+  main #faq-section .faq-group {
+    width: 75%; } }
+
+@media screen and (max-width: 1440px) {
+  main #product p {
+    padding: 2rem; }
+  main #product .product-features {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 10rem; }
+    main #product .product-features div:nth-child(1) {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(2) {
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(3) {
+      grid-column: 5 / span 2;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(4) {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 1; }
+    main #product .product-features div:nth-child(5) {
+      grid-column: 4 / span 2;
+      grid-row: 2 / span 1; } }
+
+@media screen and (max-width: 1300px) {
+  main #product p {
+    padding: 2rem; }
+  main #processes .process {
+    padding: 3rem; } }
+
+@media screen and (max-width: 1100px) {
+  main #product p {
+    padding: 2rem; }
+  main #product .product-features {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr); }
+    main #product .product-features_item .feature-icon {
+      height: 10rem;
+      width: 10rem;
+      font-size: 4rem; }
+      main #product .product-features_item .feature-icon::before {
+        height: 8rem;
+        width: 8rem; }
+    main #product .product-features_item:hover .feature-icon::before {
+      height: 9rem;
+      width: 9rem; }
+    main #product .product-features div:nth-child(1) {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(2) {
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(3) {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 1; }
+    main #product .product-features div:nth-child(4) {
+      grid-column: 3 / span 2;
+      grid-row: 2 / span 1; }
+    main #product .product-features div:nth-child(5) {
+      grid-column: 2 / span 2;
+      grid-row: 3 / span 1; }
+  main #processes .process {
+    background-color: transparent;
+    box-shadow: none;
+    width: 70%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3);
+    gap: 3rem; }
+    main #processes .process-item {
+      padding: 5rem; }
+    main #processes .process div:not(:first-child):after {
+      display: none; } }
+
+@media screen and (max-width: 900px) {
+  main #product p {
+    padding: 2rem; }
+  main #faq-section .faq-group {
+    width: 80%; } }
