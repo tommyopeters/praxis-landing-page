@@ -64,6 +64,11 @@ header {
         font-family: "Open Sans", sans-serif;
         font-weight: 700;
         font-size: 2rem; }
+      header .container .logo-bar .logo {
+        width: 25%;
+        overflow: hidden; }
+        header .container .logo-bar .logo img {
+          width: 100%; }
     header .container .header-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -110,6 +115,12 @@ header {
     width: 80%; }
     header .container .header-content_text h1 {
       font-size: 5rem; } }
+
+@media screen and (max-width: 660px) {
+  header .container .logo-bar {
+    width: 100%; }
+    header .container .logo-bar .logo {
+      width: 40%; } }
 
 main {
   z-index: -900;
@@ -475,3 +486,25 @@ main {
     padding: 2rem; }
   main #faq-section .faq-group {
     width: 80%; } }
+
+@media screen and (max-width: 660px) {
+  main #product .product-features {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+    main #product .product-features div:nth-child(1) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1; }
+    main #product .product-features div:nth-child(2) {
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1; }
+    main #product .product-features div:nth-child(3) {
+      grid-column: 1 / span 1;
+      grid-row: 3 / span 1; }
+    main #product .product-features div:nth-child(4) {
+      grid-column: 1 / span 1;
+      grid-row: 4 / span 1; }
+    main #product .product-features div:nth-child(5) {
+      grid-column: 1 / span 1;
+      grid-row: 5 / span 1; }
+  main #faq-section .faq-group {
+    grid-template-columns: 1fr; } }
